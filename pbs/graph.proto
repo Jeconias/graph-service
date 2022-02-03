@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package graphpb;
+option go_package = "./graphpb";
+
+message Node {
+    string id = 1;
+    string from = 2;
+    string to = 3;
+}
+
+message Info {
+    string url = 1;
+    int64 date = 2;
+}
+
+message GraphRequest {
+    string from = 1;
+    string to = 2;
+    Info infos = 3;
+}
+
+message GraphResponse {
+    string message = 1;
+    Node data = 2;
+}
+
+service GraphService {
+    rpc Register(GraphRequest) returns (GraphResponse) {};
+    //rpc RegisterStream(stream GraphRequest) returns (GraphResponse) {};
+}

@@ -1,0 +1,41 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  color: #333;
+}
+
+.main {
+  display: flex;
+}
+
+.side {
+  flex: 1;
+  padding: 16px;
+}
+
+.side h3 {
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.list {
+  margin: 0;
+  padding-left: 24px;
+  list-style: none;
+}
+
+.list li:before {
+  content: '\2022';
+  color: #ccc;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+#diagram-div {
+  flex: 2;
+  height: 100vh;
+  border: 1px solid #ccc;
+}
